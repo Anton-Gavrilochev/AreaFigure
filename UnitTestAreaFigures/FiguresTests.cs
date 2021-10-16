@@ -1,133 +1,41 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using AreaFigure;
+using System.Collections.Generic;
 
 namespace UnitTestAreaFigures
 {
     [TestClass]
     public class FiguresTests
-    {        
+    {
         [TestMethod]
-        public void TestAreaCircleByRadius1()
+        public void TestArea()
         {
-            //Expectation
-            double radius = 5;
-            double expected = Math.PI * Math.Pow(radius, 2);
-            //если сравнивать с заданным в ручную double,
-            //выдает ошибку, хотя значения совпадают,
-            //если честно не знаю как правильно сравнивать double
-            
-            double actual = Figures.AreaCircleByRadius(radius);
-            
-            Assert.AreEqual(expected, actual);
-        }
+            //Исходные данные
+            double A = 7;
+            double B = 4;
+            double C = 8;
+            double radius = 8;
 
-        [TestMethod]
-        public void TestAreaCircleByRadius2()
-        {
-            //Expectation
-            double radius = 3;
-            double expected = Math.PI * Math.Pow(radius, 2);
+            //Ожидаемые данные
+            double[] expected = new double[] { 13.997767679169419, Math.PI * Math.Pow(radius, 2) };
 
-            double actual = Figures.AreaCircleByRadius(radius);
+            //Вывод данных
+            Tringle tringle = new Tringle(A, B, C);
+            Circle circle = new Circle(radius);
 
-            Assert.AreEqual(expected, actual);
-        }
+            List<Figure> lFigures = new List<Figure> { tringle, circle };
+            double[] actual = new double[2];
 
-        [TestMethod]
-        public void TestAreaCircleByRadius3()
-        {
-            //Expectation
-            double radius = 6.2;
-            double expected = Math.PI * Math.Pow(radius, 2);
+            int k = 0;
+            foreach(Figure figure in lFigures)
+            {
+                actual[k] = figure.Area();
+                k++;
+            }
 
-            double actual = Figures.AreaCircleByRadius(radius);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestAreaTringleByThreeSides1()
-        {
-            //Expectation
-            double A = 50;
-            double B = 70;
-            double C = 80;
-            double expected = 1732.0508075688772;
-
-            double actual = Figures.AreaTringleByThreeSides(A, B, C);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestAreaTringleByThreeSides2()
-        {
-            //Expectation
-            double A = 40;
-            double B = 70;
-            double C = 90;
-            double expected = 1341.640786499874;
-
-            double actual = Figures.AreaTringleByThreeSides(A, B, C);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestAreaTringleByThreeSides3()
-        {
-            //Expectation
-            double A = 3.5;
-            double B = 8.4;
-            double C = 9.6;
-            double expected = 14.512962955578713;
-
-            double actual = Figures.AreaTringleByThreeSides(A, B, C);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestCheckRectangularTringle1()
-        {
-            //Expectation
-            double A = 50;
-            double B = 70;
-            double C = 80;
-            bool expected = false;
-
-            bool actual = Figures.CheckRectangularTringle(A, B, C);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestCheckRectangularTringle2()
-        {
-            //Expectation
-            double A = 90; 
-            double B = 70;
-            double C = 40;
-            bool expected = true;
-
-            bool actual = Figures.CheckRectangularTringle(A, B, C);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void TestCheckRectangularTringle3()
-        {
-            //Expectation
-            double A = 3.5;
-            double B = 9.6;
-            double C = 8.4;
-            bool expected = true;
-
-            bool actual = Figures.CheckRectangularTringle(A, B, C);
-
-            Assert.AreEqual(expected, actual);
+            //Проверка
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }

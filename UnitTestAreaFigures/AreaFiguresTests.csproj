@@ -56,6 +56,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TringleTests.cs" />
+    <Compile Include="CircleTests.cs" />
     <Compile Include="FiguresTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

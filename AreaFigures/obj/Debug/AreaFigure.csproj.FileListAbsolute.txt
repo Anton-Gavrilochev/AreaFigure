@@ -4,3 +4,9 @@ C:\Users\Anton-PC\source\repos\AreaFigures\AreaFigures\obj\Debug\AreaFigure.cspr
 C:\Users\Anton-PC\source\repos\AreaFigures\AreaFigures\obj\Debug\AreaFigure.csproj.CoreCompileInputs.cache
 C:\Users\Anton-PC\source\repos\AreaFigures\AreaFigures\obj\Debug\AreaFigures.dll
 C:\Users\Anton-PC\source\repos\AreaFigures\AreaFigures\obj\Debug\AreaFigures.pdb
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\bin\Debug\AreaFigures.dll
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\bin\Debug\AreaFigures.pdb
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\obj\Debug\AreaFigure.csproj.AssemblyReference.cache
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\obj\Debug\AreaFigure.csproj.CoreCompileInputs.cache
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\obj\Debug\AreaFigures.dll
+C:\Users\Anton-PC\Documents\GitHub\AreaFigures\AreaFigures\obj\Debug\AreaFigures.pdb

@@ -1,5 +1,5 @@
 ﻿use ProductsByCategoriesByAntonGavrilochev
 go
-SELECT        Products.name_Product as 'Продукт', Categories.name_Categories as 'Категория'
-FROM          Products Left JOIN
-               Categories ON Categories.id_Categories = Products.id_Categories
+select  [Categories].[Name] as 'Категория', [Products].[Name] as 'Продукт'
+from    [Products] Left join
+            [Categories] on [Categories].[ID] = [Products].[idCategories]
